@@ -1,0 +1,155 @@
+.control-panel {
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.5rem; 
+}
+
+.transport-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-transport {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    border: none;
+    color: #000;
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 120px;
+}
+
+.btn-transport:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 0, 255, 0.4);
+}
+
+.btn-transport:active {
+    transform: translateY(0);
+}
+
+.btn-icon {
+    font-size: 1.2rem;
+}
+
+.bpm-control {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 15px;
+    border: 1px solid #00ffff;
+}
+
+.bpm-control label {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: #00ffff;
+    text-transform: uppercase;
+}
+
+.bpm-control input[type="range"] {
+    width: 150px;
+    height: 8px;
+    background: #333;
+    outline: none;
+    border-radius: 5px;
+    -webkit-appearance: none;
+}
+
+.bpm-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+#bpm-value {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: #00ffff;
+    font-size: 1.2rem;
+    min-width: 40px;
+}
+
+.btn-export {
+    background: linear-gradient(45deg, #00ff00, #00ffff);
+    border: none;
+    color: #000;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.btn-export:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .bpm-control {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .control-panel {
+        padding: 1rem;
+    }
+    .transport-controls {
+        flex-wrap: wrap; /* Allow buttons to wrap */
+        justify-content: center; /* Center buttons when wrapped */
+        width: 100%; /* Take full width to allow wrapping */
+        gap: 0.8rem;
+    }
+    .btn-transport {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+        min-width: unset; /* Let flexbox handle width */
+        flex-grow: 1; /* Allow buttons to grow to fill space */
+        max-width: 48%; /* To allow two side-by-side */
+    }
+    .bpm-control {
+        flex-direction: column; /* Stack label, slider, value */
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem; /* Reduce padding */
+    }
+    .bpm-control input[type="range"] {
+        width: 100%; /* Make slider full width */
+    }
+    .export-controls {
+        width: 100%; /* Make export button full width */
+    }
+    .btn-export {
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+}

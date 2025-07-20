@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000 0%, #1a0033 50%, #000066 100%);
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 0, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(0, 255, 0, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.main-content {
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Common Section Styles */
+.control-panel,
+.sound-library,
+.mixer-section,
+.sequencer-section,
+.visualizer-section {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Responsive Mixins/Utils */
+@media (max-width: 768px) {
+    .control-panel {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .transport-controls {
+        justify-content: center;
+    }
+    h2 {
+        font-size: 1.3rem; /* Slightly smaller for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .control-panel {
+        padding: 1rem;
+    }
+    .main-content {
+        padding: 1rem;
+    }
+    h2 {
+        font-size: 1.2rem; /* Even smaller for phones */
+    }
+}

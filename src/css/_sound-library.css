@@ -1,0 +1,118 @@
+.sound-library {
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+}
+
+.sound-library h2 {
+    color: #ff00ff;
+}
+
+.sound-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sound-category {
+    background: rgba(255, 0, 255, 0.05);
+    border: 1px solid rgba(255, 0, 255, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.sound-category h3 {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: #ff00ff;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sound-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.sound-item {
+    background: rgba(255, 0, 255, 0.1);
+    border: 2px solid #ff00ff;
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    user-select: none;
+}
+
+.sound-item:hover {
+    background: rgba(255, 0, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 0, 255, 0.4);
+}
+
+.sound-item.dragging {
+    opacity: 0.5;
+    border-style: dashed;
+}
+
+.sound-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.sound-label {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: #ff00ff;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .sound-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+    }
+    .sound-item {
+        padding: 0.8rem;
+    }
+    .sound-icon {
+        font-size: 1.5rem;
+    }
+    .sound-label {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sound-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 0.6rem;
+    }
+    .sound-item {
+        padding: 0.6rem;
+    }
+    .sound-icon {
+        font-size: 1.3rem;
+    }
+    .sound-label {
+        font-size: 0.65rem;
+    }
+    .sound-category {
+        padding: 0.8rem;
+    }
+    .sound-category h3 {
+        font-size: 1.1rem;
+    }
+}

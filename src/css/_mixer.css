@@ -1,0 +1,208 @@
+.mixer-section {
+    border: 2px solid #ffff00;
+    box-shadow: 0 0 30px rgba(255, 255, 0, 0.3);
+}
+
+.mixer-section h2 {
+    color: #ffff00;
+}
+
+.mixer-channels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.mixer-channel {
+    background: rgba(255, 255, 0, 0.05);
+    border: 1px solid rgba(255, 255, 0, 0.2);
+    border-radius: 10px;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    min-width: 120px;
+    max-width: 150px;
+    flex-grow: 1;
+}
+
+.mixer-channel h3 {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: #ffff00;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.control-group { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.control-group label {
+    font-weight: 600;
+    color: #ffff00;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.control-group input[type="range"] {
+    width: 120px; 
+    height: 8px;
+    background: #333;
+    outline: none;
+    border-radius: 5px;
+    -webkit-appearance: none;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #ffff00, #00ffff);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+.mixer-channel .control-group { 
+    width: 100%;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.mixer-channel .control-group label {
+    font-size: 0.75rem;
+    color: #00ffff;
+}
+
+.mixer-channel input[type="range"] {
+    width: 90%;
+    height: 6px;
+    background: #333;
+    outline: none;
+    border-radius: 3px;
+    -webkit-appearance: none;
+}
+
+.mixer-channel input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(45deg, #ffff00, #00ffff);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(255, 255, 0, 0.5);
+}
+
+/* Master Mixer Controls */
+.master-mixer-controls {
+    background: rgba(0, 0, 0, 0.8); 
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.master-mixer-controls h3 {
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    color: #00ffff;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    width: 100%; 
+    text-align: center;
+}
+
+.master-mixer-controls .control-group label {
+    color: #00ffff;
+    font-size: 1rem;
+}
+
+.master-mixer-controls input[type="range"] {
+    width: 150px;
+    height: 8px;
+    background: #333;
+    outline: none;
+    border-radius: 5px;
+    -webkit-appearance: none;
+}
+
+.master-mixer-controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+
+@media (max-width: 768px) {
+    .mixer-channels {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .mixer-channel {
+        max-width: none;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+    .mixer-channel .control-group {
+        width: auto;
+    }
+    .mixer-channel input[type="range"] {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mixer-channel {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0.8rem;
+    }
+    .mixer-channel h3 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.8rem;
+    }
+    .mixer-channel .control-group {
+        min-width: 45%;
+        align-items: center;
+        gap: 0.2rem;
+    }
+    .mixer-channel input[type="range"] {
+        width: 80px;
+    }
+    .master-mixer-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.2rem;
+    }
+    .master-mixer-controls h3 {
+        font-size: 1.5rem;
+    }
+    .master-mixer-controls .control-group {
+        width: 100%;
+        align-items: center;
+    }
+    .master-mixer-controls input[type="range"] {
+        width: 90%;
+    }
+}
