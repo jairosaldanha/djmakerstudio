@@ -1,7 +1,7 @@
-@import url('./src/css/_base.css');
-@import url('./src/css/_header.css');
-@import url('./src/css/_controls.css');
-@import url('./src/css/_sound-library.css');
-@import url('./src/css/_mixer.css');
-@import url('./src/css/_sequencer.css');
+@import url('src/css/_base.css');
+@import url('src/css/_header.css');
+@import url('src/css/_controls.css');
+@import url('src/css/_sound-library.css');
+@import url('src/css/_mixer.css');
+@import url('src/css/_sequencer.css');
 
