@@ -1,0 +1,187 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beat Maker Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">BEAT MAKER STUDIO</h1>
+            <div class="subtitle">Create • Mix • Export</div>
+        </header>
+
+        <main class="main-content">
+            <div class="control-panel">
+                <div class="transport-controls">
+                    <button id="play-btn" class="btn-transport">
+                        <span class="btn-icon"><i class="fa-solid fa-play"></i></span>
+                        <span class="btn-text">PLAY</span>
+                    </button>
+                    <button id="stop-btn" class="btn-transport">
+                        <span class="btn-icon"><i class="fa-solid fa-stop"></i></span>
+                        <span class="btn-text">STOP</span>
+                    </button>
+                    <button id="clear-btn" class="btn-transport">
+                        <span class="btn-icon"><i class="fa-solid fa-trash-alt"></i></span>
+                        <span class="btn-text">CLEAR</span>
+                    </button>
+                </div>
+
+                <div class="bpm-control">
+                    <label for="bpm">BPM</label>
+                    <input type="range" id="bpm" min="80" max="160" value="120">
+                    <span id="bpm-value">120</span>
+                </div>
+
+                <div class="export-controls">
+                    <button id="export-btn" class="btn-export">
+                        <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
+                        <span class="btn-text">EXPORT</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="sound-library">
+                <h2>SOUND LIBRARY</h2>
+                <div class="sound-categories">
+                    <div class="sound-category">
+                        <h3>DRUMS</h3>
+                        <div class="sound-grid">
+                            <div class="sound-item" data-sound="kick-01" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-drum"></i></div>
+                                <div class="sound-label">KICK 01</div>
+                            </div>
+                            <div class="sound-item" data-sound="kick-02" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-drum"></i></div>
+                                <div class="sound-label">KICK 02</div>
+                            </div>
+                            <div class="sound-item" data-sound="snare-01" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-drum"></i></div>
+                                <div class="sound-label">SNARE 01</div>
+                            </div>
+                            <div class="sound-item" data-sound="snare-02" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-drum"></i></div>
+                                <div class="sound-label">SNARE 02</div>
+                            </div>
+                            <div class="sound-item" data-sound="clap-01" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-hands-clapping"></i></div>
+                                <div class="sound-label">CLAP 01</div>
+                            </div>
+                            <div class="sound-item" data-sound="clap-02" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-hands-clapping"></i></div>
+                                <div class="sound-label">CLAP 02</div>
+                            </div>
+                            <div class="sound-item" data-sound="hihat-01" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-compact-disc"></i></div>
+                                <div class="sound-label">HI-HAT 01</div>
+                            </div>
+                            <div class="sound-item" data-sound="hihat-02" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-compact-disc"></i></div>
+                                <div class="sound-label">HI-HAT 02</div>
+                            </div>
+                            <div class="sound-item" data-sound="perc-01" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-bell"></i></div>
+                                <div class="sound-label">PERC 01</div>
+                            </div>
+                            <div class="sound-item" data-sound="perc-02" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-bell"></i></div>
+                                <div class="sound-label">PERC 02</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sound-category">
+                        <h3>SYNTHS</h3>
+                        <div class="sound-grid">
+                            <div class="sound-item" data-sound="bass-01" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-waveform"></i></div>
+                                <div class="sound-label">BASS 01</div>
+                            </div>
+                            <div class="sound-item" data-sound="bass-02" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-waveform"></i></div>
+                                <div class="sound-label">BASS 02</div>
+                            </div>
+                            <div class="sound-item" data-sound="synth-01" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-keyboard"></i></div>
+                                <div class="sound-label">SYNTH 01</div>
+                            </div>
+                            <div class="sound-item" data-sound="synth-02" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-keyboard"></i></div>
+                                <div class="sound-label">SYNTH 02</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sound-category">
+                        <h3>FX</h3>
+                        <div class="sound-grid">
+                            <div class="sound-item" data-sound="fx-01" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-sparkles"></i></div>
+                                <div class="sound-label">FX 01</div>
+                            </div>
+                            <div class="sound-item" data-sound="fx-02" draggable="true">
+                                <div class="sound-icon"><i class="fa-solid fa-sparkles"></i></div>
+                                <div class="sound-label">FX 02</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sequencer-section">
+                <h2>STEP SEQUENCER</h2>
+                <div class="sequencer-grid">
+                    <!-- Sequencer tracks will be dynamically generated here by SequencerRenderer.js -->
+                </div>
+            </div>
+
+            <div class="mixer-section">
+                <h2>MIXER</h2>
+                <div class="mixer-channels">
+                    <!-- Mixer channels will be dynamically generated here by MixerRenderer.js -->
+                </div>
+
+                <div class="master-mixer-controls">
+                    <h3>MASTER</h3>
+                    <div class="control-group">
+                        <label for="master-vol">VOLUME</label>
+                        <input type="range" id="master-vol" min="0" max="1" step="0.01" value="0.7" data-control="master-volume">
+                    </div>
+                    <div class="control-group">
+                        <label for="master-rev-wet">REVERB</label>
+                        <input type="range" id="master-rev-wet" min="0" max="1" step="0.01" value="0.3" data-control="master-reverb">
+                    </div>
+                    <div class="control-group">
+                        <label for="master-eqlow">LOW EQ</label>
+                        <input type="range" id="master-eqlow" min="-12" max="12" step="0.1" value="0" data-control="master-eqlow">
+                    </div>
+                    <div class="control-group">
+                        <label for="master-eqhigh">HIGH EQ</label>
+                        <input type="range" id="master-eqhigh" min="-12" max="12" step="0.1" value="0" data-control="master-eqhigh">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "@src/audio/": "./src/audio/",
+                "@src/ui/": "./src/ui/",
+                "@src/utils/": "./src/utils/"
+            }
+        }
+    </script>
+    <script type="module" src="audio-engine.js"></script>
+    <script type="module" src="sequencer.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
