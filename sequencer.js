@@ -1,4 +1,4 @@
-import { SequencerRenderer } from '@src/ui/SequencerRenderer.js';
+import { SequencerRenderer } from 'src/ui/SequencerRenderer.js';
 
 export class Sequencer {
     constructor(audioEngine) {
