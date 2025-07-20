@@ -1,7 +1,7 @@
-import { MixerRenderer } from '@src/ui/MixerRenderer.js';
-import { SequencerRenderer } from '@src/ui/SequencerRenderer.js';
-import { AudioEngine } from './audio-engine.js'; // Import AudioEngine
-import { Sequencer } from './sequencer.js'; // Import Sequencer
+import { MixerRenderer } from 'src/ui/MixerRenderer.js';
+import { SequencerRenderer } from 'src/ui/SequencerRenderer.js';
+import { AudioEngine } from '.audio-engine.js'; // Import AudioEngine
+import { Sequencer } from 'sequencer.js'; // Import Sequencer
 
 class BeatMaker {
     constructor() {
