@@ -1,7 +1,7 @@
-import { SampleGenerator } from './src/audio/SampleGenerator.js';
-import { WavEncoder } from './src/utils/WavEncoder.js';
-import { Track } from './src/audio/Track.js'; // New import
-import { SAMPLE_DEFINITIONS } from './src/audio/SampleDefinitions.js'; // New import
+import { SampleGenerator } from 'src/audio/SampleGenerator.js';
+import { WavEncoder } from '.src/utils/WavEncoder.js';
+import { Track } from '.src/audio/Track.js'; // New import
+import { SAMPLE_DEFINITIONS } from '.src/audio/SampleDefinitions.js'; // New import
 
 export class AudioEngine {
     constructor() {
